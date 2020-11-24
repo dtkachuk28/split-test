@@ -1,4 +1,7 @@
-# <a href="https://github.com/rhildred/split-test" target="_blank">split-test</a>
+# Github:
+<a href="https://dtkachuk28.github.io/split-test/test1">Test 1</a></br>
+<a href="https://dtkachuk28.github.io/split-test/test2">Test 2</a>
 
-An engine for splitting the traffic between sites.
+# Heroku:
+<a href="https://split-test-info3130.herokuapp.com/">Random test</a>
 
