@@ -5,3 +5,5 @@
 # Heroku:
 <a href="https://split-test-info3130.herokuapp.com/">Random test</a>
 
+# Screenshot :
+<img src="GA.png" alt="GA Screenshot">
