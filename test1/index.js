@@ -1,61 +1,20 @@
 
-Survey
-    .StylesManager
-    .applyTheme("default");
+Survey.StylesManager.applyTheme("modern");
 
-var json = {
-    title: "American History",
-    pages: [
-        {
-            questions: [
-                {
-                    type: "radiogroup",
-                    name: "civilwar",
-                    title: "When was the Civil War?",
-                    choices: [
-                        "1750-1800", "1800-1850", "1850-1900", "1900-1950", "after 1950"
-                    ],
-                    correctAnswer: "1850-1900"
-                }
-            ]
-        }, {
-            questions: [
-                {
-                    type: "radiogroup",
-                    name: "libertyordeath",
-                    title: "Who said 'Give me liberty or give me death?'",
-                    choicesOrder: "random",
-                    choices: [
-                        "John Hancock", "James Madison", "Patrick Henry", "Samuel Adams"
-                    ],
-                    correctAnswer: "Patrick Henry"
-                }
-            ]
-        }, {
-            questions: [
-                {
-                    type: "radiogroup",
-                    name: "magnacarta",
-                    title: "What is the Magna Carta?",
-                    choicesOrder: "random",
-                    choices: [
-                        "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"
-                    ],
-                    correctAnswer: "The foundation of the British parliamentary system"
-                }
-            ]
-        }
-    ],
-    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
-};
+var surveyJSON = {"title":"Test 2","pages":[{"name":"page1","elements":[{"type":"text","name":"firstName","title":"First Name"},{"type":"text","name":"lastName","title":"Last Name"}]},{"name":"page2","elements":[{"type":"dropdown","name":"age","title":"Please select your age group:","choices":[{"value":"item1","text":"Under 16"},{"value":"item2","text":"16 - 17"},{"value":"item3","text":"18 and over"}]},{"type":"radiogroup","name":"humanCheck","title":"Are you a human?","choices":[{"value":"item1","text":"Yes"},{"value":"item2","text":"No"}],"hasOther":true,"otherText":"I'd rather not say"}]},{"name":"page3","elements":[{"type":"text","name":"favProduct","title":"What is your favorite product?"},{"type":"text","name":"productPurchaseReason","title":"Why did you purchase this product?"}]},{"name":"page4","elements":[{"type":"text","name":"productSatisfaction","title":"How satisfied are you with this product?"},{"type":"text","name":"recomend","title":"Would you recommend this product to a friend?"}]},{"name":"page5","elements":[{"type":"text","name":"change","title":"If you could change one thing about this product, what would it be?"},{"type":"text","name":"otherOptions","title":"Which other options were you considering before this product?"}]}],"showTitle":false}
 
-window.survey = new Survey.Model(json);
 
-survey
+window.survey = new Survey.Model(surveyJSON);
+
+
+survey	
     .onComplete
     .add(function (result) {
-        document
-            .location = "indexthanks.html";
+        document.location = "indexthanks.html";
     });
 
-$("#surveyElement").Survey({ model: survey });
+
+$("#surveyContainer").Survey({ model: survey }); 
+
+
+
